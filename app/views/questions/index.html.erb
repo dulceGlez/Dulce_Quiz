@@ -1,11 +1,11 @@
-<h1>Lista de Preguntas...</h1>
+<h1>Listening question</h1>
 <p>Total: <%= @questions.size %></p>
 <p><%= link_to'New Question', new_question_path, :class => 'btn btn-success' %></p>
 <table class="table">
   <tr>
-    <th>Pregunta</th>
-    <th>Opciónes</th>
-    <th colspan="3">Opciones</th>
+    <th>question</th>
+    <th>Option</th>
+    <th colspan="3">Options</th>
   </tr>
   <% @questions.each do |question| %>
   <tr>

@@ -63,7 +63,7 @@ class QuestionsController < ApplicationController
     @question.destroy
 
     respond_to do |format|
-      format.html {redirect_to(question_url)}
+      format.html {redirect_to(questions_url)}
       format.xml {head :ok}
     end
   end

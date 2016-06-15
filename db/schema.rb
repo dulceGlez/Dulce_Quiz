@@ -24,13 +24,11 @@ ActiveRecord::Schema.define(version: 20160615222600) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "choices", ["question_id"], name: "index_choices_on_question_id", using: :btree
-
   create_table "questions", force: :cascade do |t|
     t.string   "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "choices", "questions"
+  add_foreign_key "choices", "questions", on_delete: :cascade
 end
